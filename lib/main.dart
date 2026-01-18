@@ -23,17 +23,32 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Welcome To the Flutter App(IVOzaar)'),
+        title: const Text('Welcome To the Flutter App(IVOzaar)', style: TextStyle(
+          backgroundColor: Colors.blueGrey
+        )),
       ), //AppBar
-      body: Center(
-        child: Container(
-        width: 100,
-        height: 100,
-        color: const Color.fromARGB(255, 8, 60, 149),
-        child: const Text('Hello Developers'),
+      body: Column(
+      children: [
+        Container(
+          width: 150,
+          height: 150,
+          color: Colors.lime,
+          child: Center(
+            child: const Text(
+              'Hello World!!', style: TextStyle(
+                fontSize: 20, color: Colors.red,
+                
+                ),
+            ),
+          ),
+        ),
+        Container(
+          width:150,
+          height: 150,
+          color: Colors.red,
+        ),
+      ],
       ),
-      ),
-
     );
   }
 }
