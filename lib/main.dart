@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'buttons.dart';
 
 void main() {
   runApp(const MyApp());
@@ -9,9 +10,14 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomeScreen(),
+      home: const HomeScreen(),
+      initialRoute: '/home',
+      routes: {
+        '/home': (context) => const HomeScreen(),
+        '/buttons': (context) => const Buttons(),
+      }
     );
   }
 }
@@ -28,9 +34,16 @@ class HomeScreen extends StatelessWidget {
           style: TextStyle(backgroundColor: Colors.blueGrey),
         ),
       ), //AppBar
-      body: Column(
+      body: Container(
+      child:Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        crossAxisAlignment: CrossAxisAlignment.end,
         children: [
           Container(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+              Container(
             width: 150,
             height: 150,
             color: Colors.lime,
@@ -42,17 +55,27 @@ class HomeScreen extends StatelessWidget {
             ),
           ),
           Container(width: 150, height: 150, color: Colors.blue),
-          TextButton(
+            ],)
+          ),
+          Center(
+            child:TextButton(
             onPressed: () {
               print('Button Pressed');
               // Handle button press
             },
             child: const Text('Click me', style: TextStyle(fontSize: 13)),
           ),
-          ElevatedButton(
-            onPressed: () {
-              print('Elevated Button Pressed');
-            },
+          ),
+          Container (
+            width: 500,
+            height: 50,
+            color: Colors.teal,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [ElevatedButton(
+                onPressed: () {
+                  print('Elevated Button Pressed');
+                },
             child: const Text('Elevated Button'),
 
             onLongPress: () {
@@ -65,8 +88,21 @@ class HomeScreen extends StatelessWidget {
             },
             child: const Text('OutLine Button'),
           ),
-          Image.asset('assets/Images/flutter.jpg', width: 200, height: 200),
+          
+          ],
+          ),
+          ),
+          Center(
+            child: Container(
+            child: Column (
+              children: [
+                Image.asset('assets/Images/flutter.jpg', width: 200, height: 200),
+              ],
+            )
+          ),
+          ),
         ],
+      ),
       ),
     );
   }
