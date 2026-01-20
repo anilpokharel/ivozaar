@@ -1,15 +1,134 @@
 import 'package:flutter/material.dart';
 
-class Buttons extends StatelessWidget {
-  const Buttons({super.key});
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return TextButton(
-      onPressed: () {
-        // Handle button press
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: const HomeScreen(),
+      initialRoute: '/home',
+      routes: {
+        '/home': (context) => const HomeScreen(),
       },
-      child: const Text('Click Me'),
+    );
+  }
+}
+
+class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text(
+          'Welcome To the Flutter App(IVOzaar)',
+          style: TextStyle(backgroundColor: Colors.blueGrey),
+        ),
+      ), //AppBar
+      body: SingleChildScrollView(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.end,
+          children: [
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  Container(
+                    margin: EdgeInsets.only(right: 11),
+                    width: 150,
+                    height: 300,
+                    color: Colors.lime,
+                    child: Center(
+                      child: const Text(
+                        'Hello World!!',
+                        style: TextStyle(fontSize: 20, color: Colors.white),
+                      ),
+                    ),
+                  ),
+                  Container(margin: EdgeInsets.only(right: 11),width: 150, height: 300, color: Colors.blue, ),
+                  Container(margin: EdgeInsets.only(right: 11),width: 150, height: 300, color: Colors.red, ),
+                  Container(margin: EdgeInsets.only(right: 11),width: 150, height: 300, color: Colors.orange, ),
+                  Container(margin: EdgeInsets.only(right: 11),width: 150, height: 300, color: Colors.green, ),
+                  Container(margin: EdgeInsets.only(right: 11),width: 150, height: 300, color: Colors.blue, ),
+                ],
+              ),
+            ),
+            Center(
+              child: TextButton(
+                onPressed: () {
+                  print('Button Pressed');
+                  // Handle button press
+                },
+                child: const Text('Click me', style: TextStyle(fontSize: 13)),
+              ),
+            ),
+            Container(
+              width: 500,
+              height: 500,
+              color: Colors.teal,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  ElevatedButton(
+                    onPressed: () {
+                      print('Elevated Button Pressed');
+                    },
+                    child: const Text('Elevated Button'),
+
+                    onLongPress: () {
+                      print('Elevated Button Long pressed');
+                    },
+                  ),
+                  OutlinedButton(
+                    onPressed: () {
+                      print('OutLine Button Pressed');
+                    },
+                    child: const Text('OutLine Button'),
+                  ),
+                ],
+              ),
+            ),
+            Center(
+              child: Container(
+                child: Column(
+                  children: [
+                    Image.asset(
+                      'assets/Images/flutter.jpg',
+                      width: 200,
+                      height: 200,
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Container(
+              width: 100,
+              height: 100,
+              color: Colors.blueGrey,
+              child: InkWell(
+                onTap: () {
+                  print('Container Tapped');
+                },
+                onLongPress:  () {
+                  print('Container Long Pressed');
+                },
+                child: Center(
+                  child: Text('Click Here!!',),),
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
