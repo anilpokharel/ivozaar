@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 void main() {
   runApp(const MyApp());
 }
@@ -14,9 +13,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: const HomeScreen(),
       initialRoute: '/home',
-      routes: {
-        '/home': (context) => const HomeScreen(),
-      },
+      routes: {'/home': (context) => const HomeScreen()},
     );
   }
 }
@@ -26,22 +23,84 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+  
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
-          'Welcome To the Flutter App(IVOzaar)',
-        ),
+        title: const Text('Welcome To the Flutter App(IVOzaar)'),
       ), //AppBar
-      body: ListView.builder(
-        itemBuilder: (context, index) {
-          return Container(
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Expanded(
+            flex: 2,
             child: Container(
-              height: 200,
-              width: 200,
+              width: 50,
+              height: 100,
+              color: Colors.yellow,
+            ),
+          ),
+          Expanded(
+            flex: 3,
+            child: Container(
+              width: 50,
+              height: 100,
+              color: Colors.green,
+            ),
+          ),
+          Expanded(
+            flex: 4,
+            child: Container(
+              width: 50,
+              height: 100,
+              color: Colors.red,
+            ),
+          ),
+          Expanded(
+            flex: 5,
+            child: Container(
+              width: 50,
+              height: 100,
               color: Colors.blue,
             ),
-          );
-        },
+          ),
+          Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Expanded(
+            flex: 2,
+            child: Container(
+              width: 50,
+              height: 100,
+              color: Colors.yellow,
+            ),
+          ),
+          Expanded(
+            flex: 3,
+            child: Container(
+              width: 50,
+              height: 100,
+              color: Colors.green,
+            ),
+          ),
+          Expanded(
+            flex: 4,
+            child: Container(
+              width: 50,
+              height: 100,
+              color: Colors.red,
+            ),
+          ),
+          Expanded(
+            flex: 5,
+            child: Container(
+              width: 50,
+              height: 100,
+              color: Colors.blue,
+            ),
+          ),
+        ],
+      ),
+        ],
       ),
     );
   }

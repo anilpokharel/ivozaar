@@ -23,9 +23,10 @@ class MyApp extends StatelessWidget {
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
-
   @override
   Widget build(BuildContext context) {
+    var arrNames = ["Alice", "Bob", "Charlie", "Danial", "Eve"];
+
     return Scaffold(
       appBar: AppBar(
         title: const Text(
@@ -126,6 +127,64 @@ class HomeScreen extends StatelessWidget {
                   child: Text('Click Here!!',),),
               ),
             ),
+            ListView.builder(
+            itemBuilder: (context, index) {
+              return Text(
+                arrNames[index],
+                style: TextStyle(fontSize: 21, fontWeight: FontWeight.bold),
+              );
+            },
+            itemCount: arrNames.length,
+            itemExtent: 100,
+            scrollDirection: Axis.horizontal,
+          ),
+          ListView.separated(
+            itemBuilder: (context, index) {
+              return Text(
+                arrNames[index],
+                style: TextStyle(fontSize: 21, fontWeight: FontWeight.bold),
+              );
+            },
+            itemCount: arrNames.length,
+            separatorBuilder: (context, index) {
+              return Divider(height: 40, thickness: 5);
+            },
+          ),
+          Container(
+        width: double.infinity,
+        height: double.infinity,
+        child: Center(
+          child: Container(
+            width: 200,
+            height: 200,
+            decoration: BoxDecoration(
+              color: Colors.blueGrey,
+              borderRadius: BorderRadius.only(topRight: Radius.circular(21), bottomLeft: Radius.circular(21)),
+              border: Border.all(
+                width: 2,
+                color: Colors.cyanAccent,
+              ),
+              boxShadow: [
+                BoxShadow(
+                  blurRadius: 11,
+                  color: Colors.blue,
+                  spreadRadius: 12,
+                  
+                )
+              ]
+              ),
+              child: Center(
+                child: TextButton(
+                  child: Text("Click Me", style: TextStyle(color: Colors.white)),
+
+                  onPressed: () {
+                    print("Button clicked");
+                  },
+              ),
+          ),
+        ),
+      ),
+      ),
           ],
         ),
       ),
