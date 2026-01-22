@@ -23,11 +23,27 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var arrNames = ["Alice", "Bob", "Charlie", "Danial", "Eve", "Frank", "grace", "Hank", "Ivy", "jack"];
     return Scaffold(
       appBar: AppBar(
         title: const Text('Welcome To the Flutter App(IVOzaar)'),
       ), //AppBar
-      body: Container(),
+      body: ListView.separated(
+        itemBuilder: (context, index) {
+          return ListTile(
+            leading: Text('${ index + 1}'),
+            trailing: Icon(Icons.add_circle),
+            title: Text(arrNames[index]),
+            subtitle: Text('Number ${index + 1}'),
+          );
+        },
+        separatorBuilder: (context, index) {
+          return Divider(
+
+          );
+        },
+        itemCount: arrNames.length,
+      ),
     );
   }
 }

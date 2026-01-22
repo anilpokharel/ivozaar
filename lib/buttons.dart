@@ -185,6 +185,24 @@ class HomeScreen extends StatelessWidget {
         ),
       ),
       ),
+      Row(
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(top: 25, left: 12),
+            child: Container(
+              width: 100,
+              height: 100,
+              color: Colors.blue,
+            ),
+          ),
+          Container(
+            margin: EdgeInsets.only(top: 25, left: 12),
+            width: 100,
+            height: 100,
+            color: Colors.red,
+          )
+        ],
+      ),
           ],
         ),
       ),
