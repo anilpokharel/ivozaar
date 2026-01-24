@@ -40,7 +40,6 @@ class HomeScreen extends StatelessWidget {
       body: Column(
         children: [
           Card(
-            shadowColor: Colors.red,
             elevation: 20,
             child: Row(
               children: [
@@ -63,7 +62,6 @@ class HomeScreen extends StatelessWidget {
             
           ),
           Card(
-            shadowColor: Colors.red,
             elevation: 20,
             child: Row(
               children: [
@@ -86,7 +84,6 @@ class HomeScreen extends StatelessWidget {
             
           ),
           Card(
-            shadowColor: Colors.red,
             elevation: 20,
             child: Row(
               children: [
@@ -109,7 +106,6 @@ class HomeScreen extends StatelessWidget {
             
           ),
           Card(
-            shadowColor: Colors.red,
             elevation: 20,
             child: Row(
               children: [
