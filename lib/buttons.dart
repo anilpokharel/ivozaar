@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ivozaar/ui_helper/util.dart';
 
 
 void main() {
@@ -150,7 +151,7 @@ class HomeScreen extends StatelessWidget {
               return Divider(height: 40, thickness: 5);
             },
           ),
-          Container(
+          SizedBox(
         width: double.infinity,
         height: double.infinity,
         child: Center(
@@ -201,6 +202,13 @@ class HomeScreen extends StatelessWidget {
             height: 100,
             color: Colors.red,
           )
+        ],
+      ),
+      Column(
+        children: [
+          Text('Hello Flutter', style: Theme.of(context).textTheme.headlineMedium!.copyWith(color: Colors.red)),
+          Text('Hello Flutter', style: Theme.of(context).textTheme.bodyMedium),
+          Text('Hello Flutter', style: mtextStyle16(fontSize: 20)),
         ],
       ),
           ],

@@ -32,9 +32,9 @@ class HomeScreen extends StatelessWidget {
           Container(
             margin: EdgeInsets.only(top: 50, left: 20),
             child: CircleAvatar(
-              child: Text('Anil pokhrel', style: TextStyle(fontFamily: 'ZalandoSansExpanded'),),
               radius: 30,
               backgroundImage: AssetImage('assets/Images/flutter.jpg'),
+              child: Text('Anil pokhrel', style: TextStyle(fontFamily: 'ZalandoSansExpanded'),),
             ),
           ),
           Container(
@@ -45,7 +45,9 @@ class HomeScreen extends StatelessWidget {
             ),
           ),
         ],
+        
       ),
+      
     );
   }
 }
