@@ -24,22 +24,55 @@ class MyApp extends StatelessWidget {
         ),
       ),
       debugShowCheckedModeBanner: false,
-      home:  HomeScreen(),
-      
+      home: const HomeScreen(),
+      initialRoute: '/home',
+      routes: {'/home': (context) => const HomeScreen()},
     );
   }
 }
 
-class HomeScreen extends StatelessWidget {
-  
+class HomeScreen extends StatefulWidget {
+  const HomeScreen({super.key});
 
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('(IVOzaar)')), //AppBar
       body: Column(
         children: [
-          
+          GridView.count(
+            crossAxisCount: 3,
+            crossAxisSpacing: 11,
+            mainAxisSpacing: 11,
+            children: [
+              Container(
+                color: Colors.blue,
+              ),
+              Container(
+                color: Colors.blue,
+              ),
+              Container(
+                color: Colors.blue,
+              ),
+              Container(
+                color: Colors.blue,
+              ),
+              Container(
+                color: Colors.blue,
+              ),
+              Container(
+                color: Colors.blue,
+              ),
+              Container(
+                color: Colors.blue,
+              ),
+            ],
+          )
         ],
       ),
     );
