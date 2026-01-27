@@ -24,16 +24,15 @@ class MyApp extends StatelessWidget {
         ),
       ),
       debugShowCheckedModeBanner: false,
-      home:  HomeScreen(),
-      
+      home: HomeScreen(),
     );
   }
 }
 
 class HomeScreen extends StatelessWidget {
-  var EmailController = TextEditingController();
-  var NameController = TextEditingController();
-  var PasswordController = TextEditingController();
+  final EmailController = TextEditingController();
+  final NameController = TextEditingController();
+  final PasswordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -141,8 +140,7 @@ class HomeScreen extends StatelessWidget {
           ElevatedButton(
             style: ElevatedButton.styleFrom(
               backgroundColor: Colors.green,
-              foregroundColor: Colors.white
-              
+              foregroundColor: Colors.white,
             ),
             onPressed: () {
               String name = NameController.text.toString();

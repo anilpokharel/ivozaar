@@ -39,42 +39,26 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  callBack() {
+    print("Clicked!!");
+  }
+
   @override
   Widget build(BuildContext context) {
+    var Arrcolors = [
+      Colors.red,
+      Colors.green,
+      Colors.blue,
+      Colors.amberAccent,
+      Colors.orange,
+      Colors.purple,
+      Colors.pink,
+      Colors.blueAccent,
+      Colors.tealAccent,
+    ];
     return Scaffold(
       appBar: AppBar(title: const Text('(IVOzaar)')), //AppBar
-      body: Column(
-        children: [
-          GridView.count(
-            crossAxisCount: 3,
-            crossAxisSpacing: 11,
-            mainAxisSpacing: 11,
-            children: [
-              Container(
-                color: Colors.blue,
-              ),
-              Container(
-                color: Colors.blue,
-              ),
-              Container(
-                color: Colors.blue,
-              ),
-              Container(
-                color: Colors.blue,
-              ),
-              Container(
-                color: Colors.blue,
-              ),
-              Container(
-                color: Colors.blue,
-              ),
-              Container(
-                color: Colors.blue,
-              ),
-            ],
-          )
-        ],
-      ),
+      body: ElevatedButton(onPressed: callBack, child: Text('Click Me!')),
     );
   }
 }

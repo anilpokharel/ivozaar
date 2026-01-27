@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:ivozaar/ui_helper/util.dart';
 
 void main() {
   runApp(const MyApp());
@@ -55,7 +54,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 style: TextStyle(fontSize: 15, fontStyle: FontStyle.italic),
               ),
             ),
-            
+
             ElevatedButton(
               onPressed: () async {
                 TimeOfDay? timepeaked = await showTimePicker(
@@ -65,7 +64,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 );
 
                 if (timepeaked != null) {
-                  print('Time Selected: ${timepeaked.hour}:${timepeaked.minute}');
+                  print(
+                    'Time Selected: ${timepeaked.hour}:${timepeaked.minute}',
+                  );
                 }
                 ;
               },
@@ -81,9 +82,11 @@ class _HomeScreenState extends State<HomeScreen> {
                     firstDate: DateTime(2019),
                     lastDate: DateTime(2030),
                   );
-              
+
                   if (datepeaked != null) {
-                    print('Date Selected: ${datepeaked.year}:${datepeaked.month}:${datepeaked.day}');
+                    print(
+                      'Date Selected: ${datepeaked.year}:${datepeaked.month}:${datepeaked.day}',
+                    );
                   }
                   ;
                 },
