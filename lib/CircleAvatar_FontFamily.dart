@@ -19,10 +19,24 @@ class MyApp extends StatelessWidget {
 }
 
 class HomeScreen extends StatelessWidget {
+  callBack() {
+    print("Clicked!!");
+  }
   const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    var Arrcolors = [
+      Colors.red,
+      Colors.green,
+      Colors.blue,
+      Colors.amberAccent,
+      Colors.orange,
+      Colors.purple,
+      Colors.pink,
+      Colors.blueAccent,
+      Colors.tealAccent,
+    ];
     return Scaffold(
       appBar: AppBar(
         title: const Text('Welcome To the Flutter App(IVOzaar)'),
@@ -44,6 +58,7 @@ class HomeScreen extends StatelessWidget {
               backgroundImage: AssetImage('assets/Images/flutter.jpg'),
             ),
           ),
+          ElevatedButton(onPressed: callBack, child: Text('Click Me!')),
         ],
         
       ),
