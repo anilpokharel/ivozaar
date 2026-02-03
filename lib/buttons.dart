@@ -211,6 +211,20 @@ class HomeScreen extends StatelessWidget {
           Text('Hello Flutter', style: mtextStyle16(fontSize: 20)),
         ],
       ),
+      Stack(
+        children: [
+          Container(
+            width: 200,
+            height: 200,
+            color: Colors.grey,
+          ),
+          Container(
+            width: 160,
+            height: 160,
+            color: Colors.blueAccent,
+          ),
+        ],
+      ),
           ],
         ),
       ),

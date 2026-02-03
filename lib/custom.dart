@@ -44,50 +44,28 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('(IVOzaar)')), //AppBar
-      body:Container(
-        width: double.infinity,
-        child: Wrap(
-          direction: Axis.vertical,
-          alignment: WrapAlignment.center,
-          spacing: 11,
-          runSpacing: 11,
+      body: Container(
+        width: 200,
+        child: Column(
           children: [
-            Container(
-              height: 100,
-              width: 100,
-              color: Colors.red,
+            Rounded(
+              btnName: 'play',
+              bgcolor: Colors.red,
+              textStyle: TextStyle(fontSize: 19),
+              icon: Icon(Icons.play_arrow),
+              callback: () {
+                print('Play Button');
+              },
             ),
-            Container(
-              height: 100,
-              width: 100,
-              color: Colors.green,
+            Rounded(
+              btnName: 'Login',
+              bgcolor: Colors.blue,
+              textStyle: TextStyle(fontSize: 19),
+              icon: Icon(Icons.lock),
+              callback: () {
+                print('login Button');
+              },
             ),
-          Container(
-              height: 100,
-              width: 100,
-              color: Colors.blue,
-            ),
-          Container(
-              height: 100,
-              width: 100,
-              color: Colors.grey,
-            ),
-          Container(
-              height: 100,
-              width: 100,
-              color: Colors.cyanAccent,
-            ),
-          Container(
-              height: 100,
-              width: 100,
-              color: Colors.blueGrey,
-            ),
-          Container(
-              height: 100,
-              width: 100,
-              color: Colors.yellow,
-            ),
-          
           ],
         ),
       ),
