@@ -59,6 +59,50 @@ class HomeScreen extends StatelessWidget {
             ),
           ),
           ElevatedButton(onPressed: callBack, child: Text('Click Me!')),
+          Wrap(
+            direction: Axis.vertical,
+            alignment: WrapAlignment.center,
+            spacing: 11,
+            runSpacing: 11,
+            children: [
+              Container(
+                height: 100,
+                width: 100,
+                color: Colors.red,
+              ),
+              Container(
+                height: 100,
+                width: 100,
+                color: Colors.green,
+              ),
+            Container(
+                height: 100,
+                width: 100,
+                color: Colors.blue,
+              ),
+            Container(
+                height: 100,
+                width: 100,
+                color: Colors.grey,
+              ),
+            Container(
+                height: 100,
+                width: 100,
+                color: Colors.cyanAccent,
+              ),
+            Container(
+                height: 100,
+                width: 100,
+                color: Colors.blueGrey,
+              ),
+            Container(
+                height: 100,
+                width: 100,
+                color: Colors.yellow,
+              ),
+            
+            ],
+          ),
         ],
         
       ),
