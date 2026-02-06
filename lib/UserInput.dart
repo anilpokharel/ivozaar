@@ -34,6 +34,8 @@ class HomeScreen extends StatelessWidget {
   final NameController = TextEditingController();
   final PasswordController = TextEditingController();
 
+  HomeScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

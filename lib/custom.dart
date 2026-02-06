@@ -44,7 +44,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('(IVOzaar)')), //AppBar
-      body: Container(
+      body: SizedBox(
         width: 200,
         child: Column(
           children: [

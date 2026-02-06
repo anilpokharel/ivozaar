@@ -31,6 +31,8 @@ class MyApp extends StatelessWidget {
 }
 
 class HomeScreen extends StatefulWidget {
+  const HomeScreen({super.key});
+
   @override
   State<HomeScreen> createState() => _HomeScreenState();
 }
@@ -48,7 +50,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('(IVOzaar)')), //AppBar
-      body: Container(
+      body: SizedBox(
         width: double.infinity,
         height: 500,
         child: Column(

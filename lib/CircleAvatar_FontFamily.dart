@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
 }
 
 class HomeScreen extends StatelessWidget {
-  callBack() {
+  void callBack() {
     print("Clicked!!");
   }
   const HomeScreen({super.key});

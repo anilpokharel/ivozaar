@@ -68,7 +68,6 @@ class _HomeScreenState extends State<HomeScreen> {
                     'Time Selected: ${timepeaked.hour}:${timepeaked.minute}',
                   );
                 }
-                ;
               },
               child: Text('Show Time'),
             ),
@@ -88,7 +87,6 @@ class _HomeScreenState extends State<HomeScreen> {
                       'Date Selected: ${datepeaked.year}:${datepeaked.month}:${datepeaked.day}',
                     );
                   }
-                  ;
                 },
                 child: Text('Show date'),
               ),
