@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:ivozaar/widgets/rounded_btn.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:flutter/rendering.dart';
+import 'package:ivozaar/IntroPage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -26,28 +26,55 @@ class MyApp extends StatelessWidget {
         ),
       ),
       debugShowCheckedModeBanner: false,
-      home: const HomeScreen(),
-      initialRoute: '/home',
-      routes: {'/home': (context) => const HomeScreen()},
+      home: const Intropage(),
     );
   }
 }
 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
+class DashboardScreen extends StatefulWidget {
+  const DashboardScreen({super.key});
 
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  State<DashboardScreen> createState() => _DashboardScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _DashboardScreenState extends State<DashboardScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('(IVOzaar)')), //AppBar
-      body: Container(
-        
-      ),
+      body: SingleChildScrollView(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            Container(
+              height : 200,
+              width: 200,
+              color: Colors.green,
+            ),
+            Container(
+              height : 200,
+              width: 200,
+              color: Colors.red,
+            ),
+            Container(
+              height : 200,
+              width: 200,
+              color: Colors.blue,
+            ),
+            Container(
+              height : 200,
+              width: 200,
+              color: Colors.orange,
+            ),
+            Container(
+              height : 200,
+              width: 200,
+              color: Colors.yellowAccent,
+            ),
+          ],
+        ),
+      )
     );
   }
 }

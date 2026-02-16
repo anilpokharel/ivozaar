@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ivozaar/main.dart';
 
 void main() {
   runApp(const MyApp());
@@ -149,6 +150,10 @@ class HomeScreen extends StatelessWidget {
               String email = EmailController.text.toString();
               String password = PasswordController.text.toString();
               print('Name: $name, Email: $email, Password: $password');
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => DashboardScreen()),
+              );
             },
             child: Text('Submit'),
           ),
